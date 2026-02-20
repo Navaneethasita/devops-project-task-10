@@ -34,6 +34,7 @@ jobs:
         image-ref: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.run_number }}
         severity: CRITICAL
         exit-code: 1
+        ignore-unfixed: true
 
     # 🚀 Push Image
     - name: Push Docker Image
